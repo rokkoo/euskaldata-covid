@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className="flex flex-col items-center h-full justify-center">
         <h1 className={styles.title}>Euskal data Covid</h1>
       </main>
 
