@@ -1,3 +1,21 @@
+:root {
+  /* destructure brand channels */
+  --hue: 200; /* change me!! */
+  --saturation: 100%;
+  --lightness: 50%;
+
+  /* build colors with props */
+  --brand: hsl(var(--hue) var(--saturation) var(--lightness));
+
+  /* very dark brand blue */
+  --text: hsl(var(--hue) var(--saturation) 10% /* lower is darker */);
+
+  /* very bright brand white */
+  --surface: hsl(
+    var(--hue) calc(var(--saturation) / 2) 95% /* higher is lighter */
+  );
+}
+
 html,
 body {
   padding: 0;
@@ -6,11 +24,39 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 10vmin;
+  font-weight: 200;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+b {
+  color: hsl(var(--hue) var(--saturation) 30%);
+}
+
+u {
+  text-decoration-color: var(--brand);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* just tweak the lightness */
+  /* maybe desaturate too */
+
+  :root {
+    --text: hsl(var(--hue) calc(var(--saturation) / 2) 85%);
+
+    --surface: hsl(var(--hue) var(--saturation) 5%);
+  }
+
+  b {
+    color: hsl(var(--hue) var(--saturation) 75%);
+  }
 }

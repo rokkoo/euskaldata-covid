@@ -15,10 +15,12 @@ export default function Home() {
       </Head>
 
       <main className="flex flex-col items-center h-full justify-center">
-        <h1 className={styles.title}>Euskal data Covid</h1>
+        <h1>
+          Euskal data <u>Covid19.</u>
+        </h1>
       </main>
 
-      <footer className={styles.footer} />
+      <footer />
     </div>
   );
 }
