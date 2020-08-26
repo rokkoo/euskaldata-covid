@@ -24,7 +24,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        xs: '480px',
+        sm: '340px',
+        dark: { raw: '(prefers-color-scheme: dark)' },
       },
     },
   },
