@@ -6,7 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   display: grid;
-  /* place-content: center; */
+  place-content: center;
   font-family: system-ui;
   height: 100vh;
 }
